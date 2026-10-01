@@ -56,8 +56,8 @@ class FilterPage {
     }
 
     get apply() {
-        return $('~Terapkan');
-    }
+    return $('//android.widget.Button[@content-desc="Terapkan"]');
+}
 }
 
 module.exports = new FilterPage();
