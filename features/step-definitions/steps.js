@@ -31,31 +31,9 @@ When('I select a price range', async () => {
 });
 
 When('I apply the filters', async () => {
-    await browser.performActions([
-        {
-            type: 'pointer',
-            id: 'finger1',
-            parameters: {
-                pointerType: 'touch'
-            },
-            actions: [
-                {
-                    type: 'pointerMove',
-                    duration: 0,
-                    x: 650,
-                    y: 2265
-                },
-                {
-                    type: 'pointerDown',
-                    button: 0
-                },
-                {
-                    type: 'pointerUp',
-                    button: 0
-                }
-            ]
-        }
-    ]);
 
-    await browser.releaseActions();
+    await browser.pause(10000);
+
+    await filterPage.apply.click();
+
 });

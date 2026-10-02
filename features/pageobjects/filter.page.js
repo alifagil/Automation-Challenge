@@ -56,7 +56,7 @@ class FilterPage {
     }
 
     get apply() {
-    return $('//android.widget.Button[@content-desc="Terapkan"]');
+    return $('//android.widget.Button[starts-with(@content-desc, "Terapkan")]');
 }
 }
 
